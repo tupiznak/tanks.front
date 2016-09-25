@@ -5,6 +5,7 @@
 
         //import
         let user = {login:""};
+        let addressHost = "https://tanksback.herokuapp.com/";
 
         let Button = window.Button;
         let Form = window.Form;
@@ -15,22 +16,22 @@
         let formLogin = new Form({
             el: document.createElement('div'),
             data: {
-                title: 'Hi! Login',
+                title: 'Hi! Please login',
                 fields: [
                     {
                         name: 'login',
                         type: 'text',
-                        attrs: 'autofocus placeholder="Login" required value="test"'
+                        attrs: 'autofocus placeholder="Login" required '
                     },
                     {
                         name: 'email',
                         type: 'email',
-                        attrs: 'placeholder="E-mail" required value="test@test.test"'
+                        attrs: 'placeholder="E-mail" required '
                     },
                     {
                         name: 'password',
                         type: 'password',
-                        attrs: 'placeholder="Password" required value="test"'
+                        attrs: 'placeholder="Password" required '
                     }
                 ],
                 controls: [
@@ -73,7 +74,7 @@
 
             let xhr = new XMLHttpRequest();
 
-            xhr.open('POST', 'http://localhost:8080/api/user/add', false);
+            xhr.open('POST', addressHost+'api/user/add', false);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(JSON.stringify(formData));
 
@@ -110,11 +111,11 @@
 
             let xhr = new XMLHttpRequest();
 
-            xhr.open('POST', 'http://localhost:8080/api/user/del', false);
+            xhr.open('POST', addressHost+'api/user/del', false);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(JSON.stringify(user));
 
-            alert(`by ${user.login} you are deleted`)
+            alert(`by, ${user.login}, you are deleted`)
 
         });
     }
