@@ -6,11 +6,11 @@
   "scripts": {
     "test": "node test.js",
     "lint": "./node_modules/.bin/eslint **/*.js"
-  }/*,
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontend-park-mail-ru/sample.git"
-  }*/,
+    "url": "git+https://github.com/tupiznak/tanks.front.git"
+  },
   "engines": {
     "node": "6.3.1"
   },
