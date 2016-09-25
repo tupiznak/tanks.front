@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 6
+deploy:
+  provider: heroku
+  api_key:
+    secure: V1RZzPW9EBkRCOJEgiV/E49EVm2lskPGHrRop53zzAJrFpWnkA7dwgLrOK+gw0QkW3nT6IhLOaSPmBt3hLyDW/bScfBUhQQzUzORAqzlqvygONgYWwum/4gzIXs+e4e6CBEZVBtJfFvo0Im3dK+eIQ4eOFZ8c1WI9iM+J3A/kAAzm3JaFVrGImeYG04GKtE/k3mLB/67aOSnmOAfEb8urLklGPRF3cXAb3S06PNq3/9gfpKlNM9dlGdr8NSoHCa+Vg8pzL0wLQC/59rzcYiDtckcjYjw0bUze1yuCKaPUFcXTt5HbbsbYZSaYiYWM/scXnfMt1zFiNXSAUJESJPhAF2csgX9kfhtN00VMY33Dt/hOk0AYlzlpIVGr1d53zkoiqrs0WNY89i6Xr/W4Vk3WBbGTlCcUb/MyImN4GpSPvU+xH9DmTM//3GczbPrG+ZhAvAfoAleIN3a/gQIJu1AbWae7VQLxOiFNGKwqsThQGqpyl+iehb2yfYOk3fUXNjWQJkfe5NYm1K56ZYwnRe3aFfHbN01BNeVPbd/ItYZlxUKN2npaysiEFU0YpiIMvFhxyUGdQ58Hu6COE5ovaVbG+HoiR/hjWfAwvgIy6gaLLp5B0mJ74tlJZL37n0DfYsZnlZJipyJpEPzCiXWo2jIazyp+trcCjzYtMxIN/zDfvo=
+  app: tanksfront
+  on:
+    repo: tupiznak/tanks.front
