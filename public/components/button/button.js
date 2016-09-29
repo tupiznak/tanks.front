@@ -2,7 +2,8 @@
 	'use strict';
 
 	class Button {
-		constructor (options) {
+		constructor (options={className:"",text:""}) {
+			this.className = options.className;
 			this.text = options.text;
 			this.attrs = options.attrs || [];
 			this.el = document.createElement('button');
@@ -15,6 +16,8 @@
 		}
 
 		render () {
+			if(this.className!=null)
+				this.el.classList.add(this.className);
 			this.el.innerHTML = this.text;
 			this.el.classList.add('button');
 			this.setAttrs(this.attrs);

@@ -1,13 +1,15 @@
 let express = require('express');
 let parser = require('body-parser');
 let app = express();
-//let technoDoc = require('techno-gendoc');
+let technoDoc = require('techno-gendoc');
 let path = require('path');
+
+let Swagger = require('swagger-client');
 
 //let technolibs = require('technolibs');
 
 app.use('/', express.static('public', { maxAge: 1 }));
-//technoDoc.generate(require('./api'), 'public');
+technoDoc.generate(require('./api'), 'public');
 
 app.use(parser.json());
 app.use('/libs', express.static('node_modules'));

@@ -63,13 +63,14 @@
             let {controls = []} = this.data;
 
             controls.forEach(data => {
-                let control = new Button({text: data.text}).render();
+                let control = new Button({text: data.text, className: data.className}).render();
                 this.el.querySelector('.js-controls').appendChild(control.el);
             });
         }
 
         on(type, callback) {
-            this.el.addEventListener(type, callback);
+            //this.el.querySelector('button').addEventListener(type, callback, false);
+            this.el.addEventListener(type, callback, false);
         }
 
         getFormData() {
